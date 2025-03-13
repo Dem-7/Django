@@ -6,3 +6,6 @@ def ddt(request):
 
 def ddd(request):
     return HttpResponse("<h1> Это вторая страница моего сайта на Django </h1>")
+
+def lll(request):
+    return  HttpResponse("<h1>Это третья страница моего сайта на Django</h1>")
