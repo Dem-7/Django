@@ -1,0 +1,28 @@
+
+{% extends 'nn/shablon.html' %}
+
+
+
+{%block title%}
+Новости
+{% endblock %}
+
+{% block content %}
+<h1> {{f}} новостей </h1>
+<br>
+<hr>
+
+{% for s in k %}
+    <div>
+        <h2>{{s.a}}</h2>
+        <p>{{s.b}}</p>
+        <p>{{s.c}}</p>
+        <p>{{s.d}}</p>
+        <p>{{s.e}}</p>
+    </div>
+
+
+{% endfor %}
+{% endblock %}
+
+
