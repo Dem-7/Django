@@ -1,0 +1,29 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <!-- Подключение CSS файла -->
+    <link rel="stylesheet" href="{% static 'nn/css/stili.css' %}">
+</head>
+<body>
+    {% include 'nn/include.html' %}
+    <ul>
+        <li><a href="{% url 'gl' %}">главная</a></li>
+        <li><a href="{% url 'ko' %}">контакты</a></li>
+        <li><a href="{% url 'on' %}">о нас</a></li>
+        <li><a href="{% url 'now' %}">новостная страница</a></li>
+
+    </ul>
+
+    {% block content %}
+    {% endblock %}
+    <img src="{% static 'nn/img/ikonka.png' alt = 'кисти'  width='10px' %}">
+</body>
+</html>
+
