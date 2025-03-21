@@ -1,11 +1,15 @@
 
 from django.http import HttpResponse
+from django.shortcuts import render
+
 
 def ddt(request):
-    return HttpResponse("<h1> Это первая страница моего сайта на Django </h1>")
+    ff = {"asd":"нашего сайта"}
+    return render(request, 'nn/index.html' , ff)
 
 def ddd(request):
-    return HttpResponse("<h1> Это вторая страница моего сайта на Django </h1>")
+    ff = {'asd': "нашего сайта"}
+    return render(request , 'nn/kort.html' , ff)
 
 def lll(request):
     return  HttpResponse("<h1>Это третья страница моего сайта на Django</h1>")
